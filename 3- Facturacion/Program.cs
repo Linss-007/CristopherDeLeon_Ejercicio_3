@@ -88,10 +88,16 @@ switch(tipoCliente)
 {
     case 1:
         Console.WriteLine($"Su pago por ser estudiante es de: {(montoBase / descuento) * recargo}");
+        Console.WriteLine($"Con descuento de: {descuento}");
+        Console.WriteLine($"Con recargo de: {recargo}");
+        Console.WriteLine("Mostrado en decimales");
         break;
 
     case 2:
         Console.WriteLine($"Su pago por ser docente es de: {montoBase * recargo}");
+        Console.WriteLine($"Con descuento de: {descuento}");
+        Console.WriteLine($"Con recargo de: {recargo}");
+        Console.WriteLine("Mostrado en decimales");
         break;
 
     case 3:
@@ -100,16 +106,27 @@ switch(tipoCliente)
             descuento = 1.15;
         }
         Console.WriteLine($"Su pago por ser administrativo es de: {(montoBase / descuento) * recargo}");
-    break;
+        Console.WriteLine($"Con descuento de: {descuento}");
+        Console.WriteLine($"Con recargo de: {recargo}");
+        Console.WriteLine("Mostrado en decimales");
+        break;
 
     case 4:
         if (cupon == "s" || cupon == "S")
         {
             descuento = 1.15;
             Console.WriteLine($"Precio por canje de codigo: {montoBase/descuento}");
+            Console.WriteLine($"Con descuento de: {descuento}");
+            Console.WriteLine($"Con recargo de: {recargo}");
+            Console.WriteLine("Mostrado en decimales");
         }
-        Console.WriteLine($"Por ser externo su pago es normal: {montoBase}");
-    break;
+        else
+        {
+            Console.WriteLine($"Por ser externo su pago es normal: {montoBase}");
+            Console.WriteLine($"Con recargo de: {recargo}");
+            Console.WriteLine("Mostrado en decimales");
+        }
+        break;
 
     default:
         Console.WriteLine("No existe ese tipo de cliente");
